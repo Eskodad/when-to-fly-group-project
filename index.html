@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="./assets/images/circle-cropped.png" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+    <title>When To Fly</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="div1">
+            <div class="uk-navbar-container">
+                <h1 class="uk-heading-line uk-text-center"><span>HERE TO HELP YOU GET FLIGHT READY</span></h1>
+            </div>
+        </div>
+        <div class="div2">
+            <!--Site description-->
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                <h3 class="uk-card-title">Site Description</h3>
+                <p>Drones are categorized as Unmanned Aircraft Systems (UAS), which with other kinds of aircrafting
+                    systems are becoming highly available in almost all major electronic retail stores and online
+                    marketers. Every user of such technology, be it for business purposes or personal use, desires
+                    operating them whenever, wherever and most especially, making safe operation a priority. Conversely,
+                    it is very easy to pick one up from the shelf for use by prospective operators, but without the
+                    awareness that, you can't just fly or operate them anytime nor anywhere. When-To-Fly is a website
+                    inspired by a group of University of Texas at Austin Coding BootCamp students, that provides drone
+                    users/operators with all the guidance and information required for responsible and safe operation.
+                </p>
+                <!-- Zip Code Zone -->
+                <h3 class="uk-card-title">Please Enter Zip Code:</h3>
+                <div class="forum">
+                    <input type="text" id="userInput"><button id="subButton" class="example_d">Submit</button>
+                    <label for="previouslyUsedZip">
+                        <h3 class="uk-card-title">Last used zipcode:</h3>
+                    </label>
+                    <select name="previouslyUsedZip" id="dropDownBox" onclick="pastZip(event)"></select><button
+                        id="clearLocal" class="example_d">Clear</button>
+                </div>
+            </div>
+        </div>
+        <!-- Site navigation map -->
+        <div class="div3">
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                <h3 class="uk-card-title">Parks 🌳 are in <span class="foo2">GREEN</span> on map!</h3>
+                <div id="map" class="maps"></div>
+            </div>
+        </div>
+        <!--Five day forecast cards-->
+        <div class="div4">
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="div6Box">
+                <h3 class="uk-card-title">Five Day Forecast</h3><br>
+                <h5 uk-card-title>Wind Advisory: <span class="foo">HIGH</span><span class="fooM">MEDIUM</span><span class="fooL">LOW</span></h5><br>
+                <div class="uk-grid-small uk-child-width-1-4@s uk-flex" id="forcastBox">
+                </div>
+            </div>
+        </div>
+        <!--Random Youtube video placement-->
+        <div class="div5">
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                <h3 class="uk-card-title">Drone Flying Tips:</h3>
+                <button id="reload" class="example_d">Random Tip</button>
+                <div id="rando_player">
+                </div>
+            </div>
+        </div>
+        <div class="div6">
+            <footer class="uk-navbar-container">
+                <h1 class="uk-heading-line uk-text-center"><span>&#169; When To Fly</span></h1>
+            </footer>
+        </div>
+        <div class=".uk-modal-dialog"></div>
+        <script
+            src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+        <link rel="stylesheet"
+            href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+            type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+            integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
