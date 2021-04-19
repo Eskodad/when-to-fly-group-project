@@ -14,7 +14,7 @@ Launch the site in default browser.
 ## 4. Web Links
 
 ## [GitHub Repo](https://github.com/Eskodad/when-to-fly-group-project)
-## [Deployed_when-to-fly]()
+## [Deployed_when-to-fly](https://eskodad.github.io/when-to-fly-group-project/)
 
 ## 5. Screenshots
 
