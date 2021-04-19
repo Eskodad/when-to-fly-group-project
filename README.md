@@ -13,8 +13,8 @@ Launch the site in default browser.
 
 ## 4. Web Links
 
-## [GitHub Repo](https://github.com/MichealJWEllis/when-to-fly)
-## [Deployed_when-to-fly](https://michealjwellis.github.io/when-to-fly/)
+## [GitHub Repo](https://github.com/Eskodad/when-to-fly-group-project)
+## [Deployed_when-to-fly]()
 
 ## 5. Screenshots
 
