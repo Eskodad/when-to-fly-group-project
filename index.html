@@ -9,39 +9,50 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/jpg" href="./assets/images/circle-cropped.png" />
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
-    <title>When To Fly</title>
+    <title>FLIGHT TIME</title>
 </head>
 <body>
     <div class="parent">
         <div class="div1">
             <div class="uk-navbar-container">
                 <h1 class="uk-heading-line uk-text-center"><span>HERE TO HELP YOU GET FLIGHT READY</span></h1>
+                <div class="top-menu">
+                    <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="menuDropdown">☰</button>
+                    <ul id="menuDropdown" class="menu-dropdown" aria-hidden="true">
+                        <li><a href="#" id="loginLink">Login</a></li>
+                        <li><a href="#" id="subscribeLink">Subscription</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="#" id="supportLink">Support</a></li>
+                        <li><a href="#" id="settingsLink">Settings</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="div2">
-            <!--Site description-->
-            <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-                <h3 class="uk-card-title">Site Description</h3>
-                <p>Drones are categorized as Unmanned Aircraft Systems (UAS), which with other kinds of aircrafting
-                    systems are becoming highly available in almost all major electronic retail stores and online
-                    marketers. Every user of such technology, be it for business purposes or personal use, desires
-                    operating them whenever, wherever and most especially, making safe operation a priority. Conversely,
-                    it is very easy to pick one up from the shelf for use by prospective operators, but without the
-                    awareness that, you can't just fly or operate them anytime nor anywhere. When-To-Fly is a website
-                    inspired by a group of University of Texas at Austin Coding BootCamp students, that provides drone
-                    users/operators with all the guidance and information required for responsible and safe operation.
-                </p>
-                <!-- Zip Code Zone -->
-                <h3 class="uk-card-title">Please Enter Zip Code:</h3>
-                <div class="forum">
-                    <input type="text" id="userInput"><button id="subButton" class="example_d">Submit</button>
-                    <label for="previouslyUsedZip">
-                        <h3 class="uk-card-title">Last used zipcode:</h3>
-                    </label>
-                    <select name="previouslyUsedZip" id="dropDownBox" onclick="pastZip(event)"></select><button
-                        id="clearLocal" class="example_d">Clear</button>
+            <div class="site-zip">
+                <div class="uk-card zip-card uk-card-default uk-card-hover uk-card-body">
+                    <h3 class="uk-card-title">Please Enter Zip Code:</h3>
+                    <div class="forum">
+                        <input type="text" id="userInput"><button id="subButton" class="example_d">Submit</button>
+                        <label for="previouslyUsedZip">
+                            <h3 class="uk-card-title">Last used zipcode:</h3>
+                        </label>
+                        <select name="previouslyUsedZip" id="dropDownBox" onclick="pastZip(event)"></select><button
+                            id="clearLocal" class="example_d">Clear</button>
+                    </div>
+                </div>
+
+                <div class="uk-card desc-card uk-card-default uk-card-hover uk-card-body">
+                    <h3 class="uk-card-title">Site Description</h3>
+                    <p>Drones are categorized as Unmanned Aircraft Systems (UAS), which with other kinds of aircrafting
+                        systems are becoming highly available in almost all major electronic retail stores and online
+                        marketers. Every user of such technology, be it for business purposes or personal use, desires
+                        operating them whenever, wherever and most especially, making safe operation a priority. Conversely,
+                        it is very easy to pick one up from the shelf for use by prospective operators, but without the
+                        awareness that, you can't just fly or operate them anytime nor anywhere. When-To-Fly is a website
+                        inspired by a group of University of Texas at Austin Coding BootCamp students, that provides drone
+                        users/operators with all the guidance and information required for responsible and safe operation.
+                    </p>
                 </div>
             </div>
         </div>
@@ -61,18 +72,29 @@
                 </div>
             </div>
         </div>
-        <!--Random Youtube video placement-->
+        <!--Random Youtube video placement + Shop card-->
         <div class="div5">
-            <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-                <h3 class="uk-card-title">Drone Flying Tips:</h3>
-                <button id="reload" class="example_d">Random Tip</button>
-                <div id="rando_player">
+            <div class="tips-and-shop">
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body tips-card">
+                    <h3 class="uk-card-title">Drone Flying Tips:</h3>
+                    <button id="reload" class="example_d">Random Tip</button>
+                    <div id="rando_player"></div>
+                </div>
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body shop-card">
+                    <h3 class="uk-card-title">Shop</h3>
+                    <ul class="shop-links">
+                        <li><a href="https://www.dji.com/" target="_blank" rel="noopener">DJI Store</a></li>
+                        <li><a href="https://www.amazon.com/" target="_blank" rel="noopener">Amazon</a></li>
+                        <li><a href="https://www.bhphotovideo.com/" target="_blank" rel="noopener">B&H Photo</a></li>
+                        <li><a href="https://www.bestbuy.com/" target="_blank" rel="noopener">Best Buy</a></li>
+                        <li><a href="https://www.adorama.com/" target="_blank" rel="noopener">Adorama</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="div6">
             <footer class="uk-navbar-container">
-                <h1 class="uk-heading-line uk-text-center"><span>&#169; When To Fly</span></h1>
+                <h1 class="uk-heading-line uk-text-center"><span>&#169; FLIGHT TIME</span></h1>
             </footer>
         </div>
         <div class=".uk-modal-dialog"></div>

@@ -61,6 +61,55 @@ body {
   border-radius: 5px;
   background-color: black;
 }
+
+/* Tips and Shop layout */
+.tips-and-shop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.site-zip {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.zip-card {
+  flex: 0 0 38%;
+}
+.desc-card {
+  flex: 1 1 62%;
+  text-align: left;
+}
+.tips-card {
+  max-height: 220px;
+  overflow: hidden;
+}
+.tips-card #rando_player iframe {
+  height: 140px !important;
+}
+.shop-card .shop-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.shop-card .shop-links a {
+  color: #111;
+  text-decoration: none;
+}
+.shop-card .shop-links a:hover {
+  color: #20bf6b;
+  text-decoration: underline;
+}
+
+/* Make Shop card stand out */
+.shop-card {
+  background-color: rgba(255, 244, 200, 0.95) !important;
+  border: 1px solid rgba(255, 200, 0, 0.25);
+  box-shadow: 0 6px 18px rgba(255, 200, 0, 0.08);
+}
 .mapbox-form-label,
 .directions-icon,
 .directions-icon-depart {
@@ -184,6 +233,53 @@ input[type="text"] {
   display: flex;
   flex: auto;
 }
+/* Top-right menu styles */
+.top-menu {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  z-index: 1200;
+  font-family: inherit;
+}
+.menu-button {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.25);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.menu-dropdown {
+  list-style: none;
+  margin: 6px 0 0 0;
+  padding: 6px 0;
+  min-width: 160px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: none;
+}
+.menu-dropdown.open {
+  display: block;
+}
+.menu-dropdown li {
+  padding: 6px 12px;
+}
+.menu-dropdown li a {
+  color: #111;
+  text-decoration: none;
+}
+.menu-dropdown li a:hover {
+  color: #20bf6b;
+}
+.day-card {
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.day-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
 /* Media Queries */
 @media screen and (max-width: 600px) {
   #forcastBox {
@@ -204,5 +300,8 @@ input[type="text"] {
   .div6 {
     display: none;
     visibility: hidden;
+  }
+  .site-zip {
+    flex-direction: column;
   }
 }
