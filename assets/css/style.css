@@ -65,12 +65,18 @@ body{
 .uk-card-title{color:var(--text-bright);margin:0 0 12px 0;font-weight:700}
 
 /* Header */
-.div1 .uk-heading-line span{font-family: 'Orbitron', Inter, sans-serif; font-size:1.8rem; letter-spacing:2px; text-transform:uppercase; font-weight:800; position:relative; display:inline-block; padding:6px 12px;}
-
-/* Neon animated gradient text */
 .div1 .uk-heading-line span{
+  font-family: 'Orbitron', Inter, sans-serif;
+  font-size:1.8rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:800;
+  position:relative;
+  display:inline-block;
+  padding:6px 12px;
   background: linear-gradient(90deg,#00ffd5 0%, #7ef0d0 30%, #5cc2ff 60%, #b68eff 100%);
   background-size: 200% 200%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 6s linear infinite;
@@ -133,7 +139,6 @@ input[type=text]::placeholder{color:var(--muted-text)}
 
 /* Forecast */
 .day-wrapper{display:block}
-.day-wrapper{display:block}
 #forecastBox{display:grid;grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:6px}
 .day-card{background:rgba(12,20,30,0.96);padding:4px;border-radius:6px;border:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--text-bright);display:flex;flex-direction:column;align-items:center;gap:4px;min-height:72px;box-shadow:0 6px 16px rgba(2,6,23,0.45)}
 .day-card img{width:28px;height:28px;margin:0;display:block}
@@ -172,7 +177,7 @@ footer.uk-navbar-container{display:flex;justify-content:center;align-items:cente
 .uk-modal-dialog ul {padding-left:18px}
 .uk-modal-dialog a {color:#7ef0d0;text-decoration:underline}
 .uk-modal-dialog button {background:var(--accent);color:#001018;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:700}
-.uk-modal-dialog pre {background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;color:#e6f0f6;overflow:auto}
+.uk-modal-dialog pre {background:rgba(2,6,23,0.86);padding:10px;border-radius:8px;color:var(--text-bright);overflow:auto;border:1px solid rgba(255,255,255,0.08)}
 .uk-modal-dialog #notamResults {margin-top:10px;color:#ffffff}
 
 /* Small screens */
