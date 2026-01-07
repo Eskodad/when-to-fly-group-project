@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/jpg" href="./assets/images/circle-cropped.png" />
     <title>FLIGHT TIME</title>
+    <meta name="theme-color" content="#071428">
 </head>
 <body>
     <div class="parent">
@@ -19,11 +22,9 @@
                 <div class="top-menu">
                     <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="menuDropdown">☰</button>
                     <ul id="menuDropdown" class="menu-dropdown" aria-hidden="true">
-                        <li><a href="#" id="loginLink">Login</a></li>
-                        <li><a href="#" id="subscribeLink">Subscription</a></li>
                         <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="#" id="aboutLink">Site Description</a></li>
                         <li><a href="#" id="supportLink">Support</a></li>
-                        <li><a href="#" id="settingsLink">Settings</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,17 +43,20 @@
                     </div>
                 </div>
 
-                <div class="uk-card desc-card uk-card-default uk-card-hover uk-card-body">
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body shop-card">
+                    <h3 class="uk-card-title">Shop</h3>
+                    <ul class="shop-links">
+                        <li><a href="https://www.dji.com/" target="_blank" rel="noopener">DJI Store</a></li>
+                        <li><a href="https://www.amazon.com/" target="_blank" rel="noopener">Amazon</a></li>
+                        <li><a href="https://www.bhphotovideo.com/" target="_blank" rel="noopener">B&H Photo</a></li>
+                        <li><a href="https://www.bestbuy.com/" target="_blank" rel="noopener">Best Buy</a></li>
+                        <li><a href="https://www.adorama.com/" target="_blank" rel="noopener">Adorama</a></li>
+                    </ul>
+                </div>
+
+                <div id="siteDescriptionContent" style="display:none">
                     <h3 class="uk-card-title">Site Description</h3>
-                    <p>Drones are categorized as Unmanned Aircraft Systems (UAS), which with other kinds of aircrafting
-                        systems are becoming highly available in almost all major electronic retail stores and online
-                        marketers. Every user of such technology, be it for business purposes or personal use, desires
-                        operating them whenever, wherever and most especially, making safe operation a priority. Conversely,
-                        it is very easy to pick one up from the shelf for use by prospective operators, but without the
-                        awareness that, you can't just fly or operate them anytime nor anywhere. When-To-Fly is a website
-                        inspired by a group of University of Texas at Austin Coding BootCamp students, that provides drone
-                        users/operators with all the guidance and information required for responsible and safe operation.
-                    </p>
+                    <p>Drones are categorized as Unmanned Aircraft Systems (UAS), which with other kinds of aircraft systems are becoming highly available in almost all major electronic retail stores and online marketers. Every user of such technology, be it for business purposes or personal use, desires operating them whenever, wherever and most especially, making safe operation a priority. Conversely, it is very easy to pick one up from the shelf for use by prospective operators, but without the awareness that, you can't just fly or operate them anytime nor anywhere. When-To-Fly is a website inspired by a group of University of Texas at Austin Coding BootCamp students, that provides drone users/operators with all the guidance and information required for responsible and safe operation.</p>
                 </div>
             </div>
         </div>
@@ -65,10 +69,10 @@
         </div>
         <!--Five day forecast cards-->
         <div class="div4">
-            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="div6Box">
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="div6Box">
                 <h3 class="uk-card-title">Five Day Forecast</h3><br>
                 <h5 uk-card-title>Wind Advisory: <span class="foo">HIGH</span><span class="fooM">MEDIUM</span><span class="fooL">LOW</span></h5><br>
-                <div class="uk-grid-small uk-child-width-1-4@s uk-flex" id="forcastBox">
+                <div class="uk-grid-small uk-child-width-1-4@s uk-flex" id="forecastBox">
                 </div>
             </div>
         </div>
@@ -80,16 +84,7 @@
                     <button id="reload" class="example_d">Random Tip</button>
                     <div id="rando_player"></div>
                 </div>
-                <div class="uk-card uk-card-default uk-card-hover uk-card-body shop-card">
-                    <h3 class="uk-card-title">Shop</h3>
-                    <ul class="shop-links">
-                        <li><a href="https://www.dji.com/" target="_blank" rel="noopener">DJI Store</a></li>
-                        <li><a href="https://www.amazon.com/" target="_blank" rel="noopener">Amazon</a></li>
-                        <li><a href="https://www.bhphotovideo.com/" target="_blank" rel="noopener">B&H Photo</a></li>
-                        <li><a href="https://www.bestbuy.com/" target="_blank" rel="noopener">Best Buy</a></li>
-                        <li><a href="https://www.adorama.com/" target="_blank" rel="noopener">Adorama</a></li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
         <div class="div6">
