@@ -34,11 +34,11 @@
                 <div class="uk-card zip-card uk-card-default uk-card-hover uk-card-body">
                     <h3 class="uk-card-title">Please Enter Zip Code:</h3>
                     <div class="forum">
-                        <input type="text" id="userInput"><button id="subButton" class="example_d">Submit</button>
+                        <input type="text" id="userInput" onkeypress="if(event.key === 'Enter') document.getElementById('subButton').click()"><button id="subButton" class="example_d">Submit</button>
                         <label for="previouslyUsedZip">
                             <h3 class="uk-card-title">Last used zipcode:</h3>
                         </label>
-                        <select name="previouslyUsedZip" id="dropDownBox" onclick="pastZip(event)"></select><button
+                        <select name="previouslyUsedZip" id="dropDownBox" onclick="pastZip(event)" onkeydown="pastZip(event)"></select><button
                             id="clearLocal" class="example_d">Clear</button>
                     </div>
                 </div>
@@ -52,6 +52,22 @@
                         <li><a href="https://www.bestbuy.com/" target="_blank" rel="noopener">Best Buy</a></li>
                         <li><a href="https://www.adorama.com/" target="_blank" rel="noopener">Adorama</a></li>
                     </ul>
+                </div>
+
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body shop-card">
+                    <h3 class="uk-card-title">Crime Statistics</h3>
+                    <ul class="shop-links">
+                        <li><a href="https://www.cityprotect.com/" target="_blank" rel="noopener">CityProtect (Search by ZIP)</a></li>
+                        <li><a href="https://communitycrimemap.com/" target="_blank" rel="noopener">Community Crime Map</a></li>
+                        <li><a href="https://www.neighborhoodscout.com/" target="_blank" rel="noopener">NeighborhoodScout</a></li>
+                        <li><a href="https://crimegrade.org/" target="_blank" rel="noopener">CrimeGrade</a></li>
+                    </ul>
+                </div>
+
+                <div class="uk-card uk-card-default uk-card-hover uk-card-body tips-card">
+                    <h3 class="uk-card-title">Drone Flying Tips:</h3>
+                    <button id="reload" class="example_d">Random Tip</button>
+                    <div id="rando_player"></div>
                 </div>
 
                 <div id="siteDescriptionContent" style="display:none">
@@ -70,22 +86,14 @@
         <!--Five day forecast cards-->
         <div class="div4">
                 <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="div6Box">
-                <h3 class="uk-card-title">Five Day Forecast</h3><br>
-                <h5 uk-card-title>Wind Advisory: <span class="foo">HIGH</span><span class="fooM">MEDIUM</span><span class="fooL">LOW</span></h5><br>
+                <h3 class="uk-card-title">Five Day Forecast</h3>
+                <h5 uk-card-title>Wind Advisory: <span class="wind-high">HIGH</span> | <span class="wind-medium">MEDIUM</span> | <span class="wind-low">LOW</span></h5><br>
                 <div class="uk-grid-small uk-child-width-1-4@s uk-flex" id="forecastBox">
                 </div>
             </div>
         </div>
         <!--Random Youtube video placement + Shop card-->
         <div class="div5">
-            <div class="tips-and-shop">
-                <div class="uk-card uk-card-default uk-card-hover uk-card-body tips-card">
-                    <h3 class="uk-card-title">Drone Flying Tips:</h3>
-                    <button id="reload" class="example_d">Random Tip</button>
-                    <div id="rando_player"></div>
-                </div>
-                
-            </div>
         </div>
         <div class="div6">
             <footer class="uk-navbar-container">
