@@ -57,7 +57,7 @@ body{
 .div2{grid-column:1/13}
 .div3{grid-column:1/8}
 .div4{grid-column:8/13}
-.div5{grid-column:8/13}
+.div5{grid-column:1/13}
 .div6{grid-column:1/13}
 
 /* Glass card common */
@@ -67,54 +67,85 @@ body{
 /* Header */
 .div1 .uk-heading-line span{
   font-family: 'Orbitron', Inter, sans-serif;
-  font-size:1.8rem;
-  letter-spacing:2px;
+  font-size:3.5rem;
+  letter-spacing:8px;
   text-transform:uppercase;
-  font-weight:800;
+  font-weight:900;
   position:relative;
   display:inline-block;
-  padding:6px 12px;
-  background: linear-gradient(90deg,#00ffd5 0%, #7ef0d0 30%, #5cc2ff 60%, #b68eff 100%);
-  background-size: 200% 200%;
+  padding:18px 36px;
+  background: linear-gradient(135deg, #00fff2 0%, #00d4ff 25%, #0084ff 50%, #6b4cff 75%, #ff00ff 100%);
+  background-size: 400% 400%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientShift 6s linear infinite;
-  text-shadow: 0 6px 22px rgba(0,255,213,0.08), 0 0 36px rgba(126,240,208,0.08);
+  animation: gradientShift 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(0,255,242,0.6)) 
+          drop-shadow(0 0 25px rgba(0,212,255,0.4))
+          drop-shadow(0 0 40px rgba(107,76,255,0.3));
+  border: 2px solid rgba(0,255,242,0.3);
+  border-radius: 4px;
+  box-shadow: inset 0 0 20px rgba(0,255,242,0.1),
+              0 0 20px rgba(0,212,255,0.2),
+              0 0 40px rgba(107,76,255,0.15);
 }
 
 /* Futuristic underline / glow */
 .div1 .uk-heading-line span::after{
   content: '';
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -10px;
-  width: 62%;
-  height: 4px;
-  border-radius: 6px;
-  background: linear-gradient(90deg, rgba(0,255,213,0.25), rgba(126,240,208,0.18));
-  box-shadow: 0 6px 20px rgba(0,255,213,0.12), 0 0 48px rgba(126,240,208,0.06);
-  filter: blur(0.6px);
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0,255,242,0.8) 20%, 
+    rgba(0,212,255,0.9) 50%, 
+    rgba(107,76,255,0.8) 80%, 
+    transparent 100%);
+  box-shadow: 0 0 15px rgba(0,255,242,0.6),
+              0 0 30px rgba(0,212,255,0.4),
+              0 4px 20px rgba(107,76,255,0.3);
   animation: pulse 2.8s ease-in-out infinite;
+}
+
+/* Corner accent elements for sci-fi effect */
+.div1 .uk-heading-line span::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid rgba(0,255,242,0.8);
+  border-left: 2px solid rgba(0,255,242,0.8);
+  animation: cornerGlow 3s ease-in-out infinite;
+}
+
+@keyframes cornerGlow {
+  0%, 100% { opacity: 0.5; transform: translate(-2px, -2px); }
+  50% { opacity: 1; transform: translate(0, 0); }
 }
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
   100% { background-position: 0% 50%; }
 }
 
 @keyframes pulse {
-  0% { transform: translateX(-50%) scaleX(0.96); opacity: 0.86; }
-  50% { transform: translateX(-50%) scaleX(1.04); opacity: 1; }
-  100% { transform: translateX(-50%) scaleX(0.96); opacity: 0.86; }
+  0% { transform: scaleX(0.95); opacity: 0.7; }
+  50% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(0.95); opacity: 0.7; }
 }
 .div1 .uk-navbar-container{padding:14px 20px;margin-bottom:8px;position:relative;z-index:2200}
 
 .top-menu{position:relative;display:inline-block;z-index:2500}
-.menu-button{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.06);color:var(--accent);padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer;z-index:2501;font-size:22px;line-height:1}
-.menu-dropdown{position:absolute;left:0;top:48px;min-width:260px;max-width:420px;max-height:360px;overflow:auto;background:linear-gradient(180deg, rgba(6,18,34,0.98), rgba(6,18,34,0.9));border-radius:10px;padding:8px;border:1px solid rgba(255,255,255,0.06);display:none;z-index:2502}
+.menu-button{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.06);color:var(--accent);padding:16px 24px;border-radius:12px;font-weight:700;cursor:pointer;z-index:2501;font-size:28px;line-height:1}
+.menu-dropdown{position:absolute;left:0;top:60px;min-width:260px;max-width:420px;max-height:360px;overflow:auto;background:linear-gradient(180deg, rgba(6,18,34,0.98), rgba(6,18,34,0.9));border-radius:10px;padding:8px;border:1px solid rgba(255,255,255,0.06);display:none;z-index:2502}
 .menu-dropdown.open{display:block}
 .menu-dropdown li{list-style:none;margin:6px 0}
 .menu-dropdown a{color:#cfeee3;text-decoration:none;padding:8px 10px;display:block;border-radius:8px}
@@ -187,6 +218,21 @@ input[type=text]::placeholder{color:#666}
 .wind-high{color:#ffffff;font-weight:700;padding:2px 8px;background:#7a0000;border:1px solid rgba(255,255,255,0.15);border-radius:4px}
 .wind-medium{color:#0b0b0b;font-weight:700;padding:2px 8px;background:#ffce80;border-radius:4px}
 .wind-low{color:#f5fff9;font-weight:700;padding:2px 8px;background:rgba(14,94,40,0.9);border-radius:4px}
+
+/* Drone news ticker */
+.ticker-card{margin-top:4px;overflow:hidden;position:relative}
+.ticker-header{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
+.ticker-label{font-family:'Orbitron', Inter, sans-serif;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid rgba(46,230,182,0.4);border-radius:999px;padding:3px 10px;background:rgba(6,18,20,0.8)}
+.ticker-sub{font-size:0.85rem;color:var(--muted-text)}
+.ticker-viewport{position:relative;overflow:hidden;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:linear-gradient(90deg, rgba(6,18,30,0.96), rgba(6,28,40,0.96));padding:6px 0}
+.ticker-track{display:inline-block;white-space:nowrap;padding-left:100%;animation:tickerScroll 75s linear infinite}
+.ticker-item{display:inline-block;margin-right:52px;color:var(--text-bright);font-size:0.9rem}
+.ticker-separator{display:inline-block;margin-right:32px;color:var(--accent);opacity:0.7}
+
+@keyframes tickerScroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-100%)}
+}
 
 /* Tips & shop */
 .tips-and-shop{display:flex;flex-direction:column;gap:12px}

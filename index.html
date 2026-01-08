@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/jpg" href="./assets/images/circle-cropped.png" />
-    <title>FLIGHT TIME</title>
+    <title>FLIGHT READY</title>
     <meta name="theme-color" content="#071428">
 </head>
 <body>
     <div class="parent">
         <div class="div1">
             <div class="uk-navbar-container">
-                <h1 class="uk-heading-line uk-text-center"><span>HERE TO HELP YOU GET FLIGHT READY</span></h1>
+                <h1 class="uk-heading-line uk-text-center"><span>FLIGHT READY</span></h1>
                 <div class="top-menu">
                     <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="menuDropdown">☰</button>
                     <ul id="menuDropdown" class="menu-dropdown" aria-hidden="true">
@@ -92,8 +92,31 @@
                 </div>
             </div>
         </div>
-        <!--Random Youtube video placement + Shop card-->
+        <!-- Drone news ticker at bottom -->
         <div class="div5">
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body ticker-card" aria-label="Latest drone news ticker">
+                <div class="ticker-header">
+                    <span class="ticker-label">DRONE OPS FEED</span>
+                    <span class="ticker-sub">Live updates: news, new models, regulations & flight tips</span>
+                </div>
+                <div class="ticker-viewport" aria-live="polite">
+                    <div class="ticker-track">
+                        <span class="ticker-item">DJI announces extended-range quadcopter optimized for search & rescue missions.</span>
+                        <span class="ticker-separator">•</span>
+                        <span class="ticker-item">FAA reminds recreational pilots to register drones over 0.55 lbs and fly under 400 ft AGL.</span>
+                        <span class="ticker-separator">•</span>
+                        <span class="ticker-item">New obstacle-avoidance sensors improve low-light flight safety in urban environments.</span>
+                        <span class="ticker-separator">•</span>
+                        <span class="ticker-item">Long-endurance fixed-wing models hit 2+ hour flight times for mapping & agriculture.</span>
+                        <span class="ticker-separator">•</span>
+                        <span class="ticker-item">Updated NOTAM procedures: always check your airspace before each mission.</span>
+                        <span class="ticker-separator">•</span>
+                        <span class="ticker-item">Racing drones get lighter carbon frames for sharper cornering and faster acceleration.</span>
+                        <span class="ticker-separator">•</span>
+                        <span class="ticker-item">New beginner-friendly GPS drones add auto-land, return-to-home, and geofence options.</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="div6">
             <footer class="uk-navbar-container">
