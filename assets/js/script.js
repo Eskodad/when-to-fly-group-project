@@ -5,7 +5,7 @@ let lat = 37.6;
 let lon = -95.665;
 // Default view for map of the North American continent.
 mapboxgl.accessToken = 'pk.eyJ1IjoibWVsbGlzMTAyMzk2IiwiYSI6ImNrbXVwcDhhNjEzeXEyd3E1cmdjOWc0emwifQ.Jusfg2NUaXj_tZbA899ZSg';
-var map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
   container: 'map', // container id
   style: 'mapbox://styles/mellis102396/ckmups1cn4s5e17nosaokzhl8', // style URL
   center: [-95.665, 37.6], // starting position [lng, lat]
@@ -55,7 +55,7 @@ $("#subButton").click(function (e) {
   // Stores last used zipcode in local storage also prevents duplicates in dropdown.
   const zipcode = JSON.parse(localStorage.getItem("zipcode")) || [];
   const savedZip = zipInput;
-  if (isNaN(zipInput)) {
+  if (Number.isNaN(zipInput)) {
     showAlert('Please Enter a Valid ZIP code!');
     $("#userInput").val('');
   } else {

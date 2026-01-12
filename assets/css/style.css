@@ -257,17 +257,28 @@ footer.uk-navbar-container{display:flex;justify-content:center;align-items:cente
 .uk-modal-dialog pre {background:rgba(2,6,23,0.86);padding:10px;border-radius:8px;color:var(--text-bright);overflow:auto;border:1px solid rgba(255,255,255,0.08)}
 .uk-modal-dialog #notamResults {margin-top:10px;color:#ffffff}
 
-/* Small screens */
+/* Small / medium screens */
 @media (max-width:800px){
-  .parent{padding:12px;grid-gap:12px}
-  .div3{grid-column:1/13}
-  .div5{grid-column:1/13}
+  body{padding:16px}
+  .parent{padding:12px;grid-gap:12px;grid-template-columns:1fr}
+  .div1,.div2,.div3,.div4,.div5,.div6{grid-column:1/-1}
+  .div1 .uk-heading-line span{
+    font-size:2.4rem;
+    letter-spacing:4px;
+    padding:14px 18px;
+    text-align:center;
+  }
   .site-zip{flex-direction:column}
-  .zip-card{width:100%}
+  .zip-card{width:100%;max-width:100%}
+  .maps{height:340px}
 }
 
 @media (max-width:420px){
   body{padding:12px}
+  .div1 .uk-heading-line span{
+    font-size:2rem;
+    letter-spacing:2px;
+  }
   .maps{height:300px}
   .day-card img{width:52px;height:52px}
 }
